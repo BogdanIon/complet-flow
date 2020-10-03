@@ -1,0 +1,22 @@
+version: '3'
+services:
+  engine:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./engine
+    ports:
+      - '8086:8086'  
+    environment:
+      - PGUSER=postgres
+      - PGHOST=postgres
+      - PGDATABASE=postgres
+      - PGPASSWORD=password
+      - PGPORT=5432
+  postgres:
+    image: 'postgres:latest'
+    ports:
+      - "5432:5432"
+    environment:
+        - POSTGRES_PASSWORD=password
+        - POSTGRES_USER=postgres
+        - POSTGRES_DB=postgres    
