@@ -12,6 +12,12 @@ services:
       - PGDATABASE=postgres
       - PGPASSWORD=password
       - PGPORT=5432
+  worker:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./worker
+    ports:
+      - '8085:8085'      
   postgres:
     image: 'postgres:latest'
     ports:
