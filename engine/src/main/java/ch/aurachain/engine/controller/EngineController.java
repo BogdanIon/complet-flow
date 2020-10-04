@@ -1,13 +1,12 @@
 package ch.aurachain.engine.controller;
 
-import ch.aurachain.engine.repository.entity.AuditEntity;
 import ch.aurachain.engine.service.EngineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/engine/api")
+@RequestMapping("/api")
 @RestController
 public class EngineController {
 
@@ -16,16 +15,16 @@ public class EngineController {
 
     @GetMapping
     public String getStatus(){
-        return "MERGE";
+        return "HELLO";
     }
 
     @GetMapping("/all")
-    public List<AuditEntity> getAll(){
+    public List<Integer> getAll(){
        return engineService.getAll();
     }
 
     @PostMapping("/{number}")
-    public void insert(@PathVariable("number")Integer number){
-        engineService.insert(number);
+    public Integer insert(@PathVariable("number")Integer number){
+        return engineService.insert(number);
     }
 }
