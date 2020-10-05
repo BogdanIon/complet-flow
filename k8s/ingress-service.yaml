@@ -19,6 +19,6 @@ spec:
               servicePort: 5000
           - path: /engine/?(.*)
             backend:
-              serviceName: engine
+              serviceName: engine-service
               servicePort: 8086    
               
