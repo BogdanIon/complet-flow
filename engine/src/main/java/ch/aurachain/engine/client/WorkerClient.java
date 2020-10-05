@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "worker")
 public interface WorkerClient {
 
-    @GetMapping("/api/value/{index}")
+    @GetMapping("/worker/api/value/{index}")
     Integer fib(@PathVariable("index") Integer index);
 }
