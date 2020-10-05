@@ -1,0 +1,19 @@
+sudo: required
+services:
+    - docker
+before_install:
+    - docker build -t bogdangherla2/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+    - docker run -e CI=true bogdangherla2/react-test npm test -- --coverage
+after_succes:
+    - docker build -t bogdangherla2/complet-flow-client ./client
+    - docker build -t bogdangherla2/complet-flow-server ./server   
+    - docker build -t bogdangherla2/complet-flow-worker ./worker  
+    - docker build -t bogdangherla2/complet-flow-engine ./engine  
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
+    - docker push bogdangherla2/complet-flow-client     
+    - docker push bogdangherla2/complet-flow-server 
+    - docker push bogdangherla2/complet-flow-worker 
+    - docker push bogdangherla2/complet-flow-engine 
+    
