@@ -1,6 +1,6 @@
 spring:
   application:
-    name: engine
+    name: engine-cluster-ip-service
   liquibase.change-log: 'classpath:database/changelog.xml'
   liquibase:
     enabled: true
@@ -37,8 +37,3 @@ spring:
         enable-api: true
 server:
   port: 8086
-
-ribbon:
-  http:
-    client:
-      enabled=true:
