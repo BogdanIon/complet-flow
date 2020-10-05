@@ -1,6 +1,6 @@
 spring:
   application:
-    name: engine
+    name: engine-service
   liquibase.change-log: 'classpath:database/changelog.xml'
   liquibase:
     enabled: true
