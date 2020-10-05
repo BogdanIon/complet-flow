@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("engine/api")
+@RequestMapping("api")
 @RestController
 public class EngineController {
 
