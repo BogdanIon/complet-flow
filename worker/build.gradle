@@ -23,6 +23,8 @@ dependencies {
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-ribbon', version: '2.2.5.RELEASE'
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-kubernetes-ribbon', version: '1.1.6.RELEASE'
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '2.2.5.RELEASE'
+
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-kubernetes-all', version: '1.1.6.RELEASE'
 }
 
 test {

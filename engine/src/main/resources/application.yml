@@ -29,6 +29,12 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
+  cloud:
+    kubernetes:
+      discovery:
+        all-namespaces: true
+      secrets:
+        enable-api: true
 server:
   port: 8086
 

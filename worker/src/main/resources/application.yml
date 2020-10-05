@@ -3,3 +3,9 @@ server:
 spring:
   application:
     name: worker
+  cloud:
+    kubernetes:
+      secrets:
+        enable-api: true
+      discovery:
+        all-namespaces: true
