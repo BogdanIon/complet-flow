@@ -19,6 +19,6 @@ spec:
               servicePort: 5000
           - path: /engine/?(.*)
             backend:
-              serviceName: engine-cluster-ip-service
+              serviceName: engine
               servicePort: 8086    
               
