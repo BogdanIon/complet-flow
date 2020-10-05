@@ -10,6 +10,7 @@ import org.springframework.cloud.netflix.ribbon.StaticServerList;
 import org.springframework.context.annotation.Bean;
 
 public class RibbonConfiguration {
+
     @Autowired
     private DiscoveryClient discoveryClient;
 
@@ -30,7 +31,7 @@ public class RibbonConfiguration {
         Server[] servers = discoveryClient.getInstances(config.getClientName()).stream()
                 .map(i -> new Server(i.getHost(), i.getPort()))
                 .toArray(Server[]::new);
-
+        System.out.println("###Bogdan___"+servers);
         return new StaticServerList(servers);
     }
 }
