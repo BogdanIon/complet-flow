@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/worker/api")
+@RequestMapping("/api")
 public class WorkerController {
 
     private final WorkerService workerService;
