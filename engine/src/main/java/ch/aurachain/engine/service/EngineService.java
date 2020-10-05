@@ -28,10 +28,10 @@ public class EngineService {
 
     public Integer insert(Integer number){
         AuditEntity auditEntity = new AuditEntity();
-//        auditEntity.setNumber(workerClient.fib(number));
+        auditEntity.setNumber(workerClient.fib(number));
         auditEntity.setNumber(number);
         auditRepository.save(auditEntity);
-        return number+1;
+        return auditEntity.getNumber();
     }
 
 }
