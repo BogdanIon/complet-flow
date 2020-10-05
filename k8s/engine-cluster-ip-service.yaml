@@ -7,5 +7,5 @@ spec:
     selector:
         component: engine
     ports:
-        - port: 8085
-          targetPort: 8085
+        - port: 8086
+          targetPort: 8086
