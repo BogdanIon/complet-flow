@@ -2,10 +2,11 @@ server:
   port: 8086
 spring:
   application:
-    name: worker-cluster-ip-service
+    name: worker
   cloud:
     kubernetes:
       secrets:
         enable-api: true
       discovery:
         all-namespaces: true
+      enabled: true
