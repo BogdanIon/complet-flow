@@ -15,5 +15,7 @@ spec:
             containers:
                 - name: worker
                   image: bogdangherla2/complet-flow-worker
+                  ports: 
+                    - containerPort: 8085  
       
                   
