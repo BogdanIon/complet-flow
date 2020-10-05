@@ -1,11 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: worker-cluster-ip-service
+  name: worker-cluster-ip-service
+  labels:
+    app: worker-cluster-ip-service
 spec:
-    type: ClusterIP
-    selector:
-        component: worker
-    ports:
-        - port: 8085
-          targetPort: 8085
+  ports:
+  - port: 8085
+    protocol: TCP
+  selector:
+    app: worker-cluster-ip-service
+  type: NodePort

@@ -20,9 +20,5 @@ spec:
           - path: /engine/?(.*)
             backend:
               serviceName: engine-cluster-ip-service
-              servicePort: 8086 
-          - path: /worker/?(.*)
-            backend:
-              serviceName: worker-cluster-ip-service
-              servicePort: 8085         
+              servicePort: 8086    
               
